@@ -1,0 +1,90 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navigation{
+    display: flex;
+    background-color: black;
+    padding: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+}
+.nav-items{
+    color: white;
+    margin-left: 2rem;
+    font-size: 16px;
+}
+
+.g-image{
+    width: 30rem;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.gallery{
+    margin: 1rem;
+    display: grid;
+    grid-template: repeat(10, 30rem) / repeat(1, 30rem);
+    justify-content: center;
+    gap: 1rem;
+    justify-items: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .navigation{
+        display: flex;
+        background-color: black;
+        padding: 1.5rem;
+        flex-direction: row;
+        justify-content: end;
+    }
+    .nav-items{
+        color: white;
+        margin-right: 1rem;
+    }
+
+    .g-image{
+        width: 22rem;
+        height: 22rem;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .gallery{
+        margin: 1rem;
+        display: grid;
+        grid-template: repeat(2, 22rem)/ repeat(3, 22rem);
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .g-image{
+        width: 30rem;
+        height: 30rem;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .gallery{
+        margin: 1rem;
+        display: grid;
+        grid-template: repeat(4, 30rem)/ repeat(3, 30rem);
+        gap: 1rem;
+    }
+    .image-ten{
+        height: -webkit-fill-available;
+        width: auto;
+        grid-column: 2/ span 2;
+        grid-row: 1/ span 2;
+    }
+}
